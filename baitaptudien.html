@@ -2,9 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<form>
+    <input type="text" id="result">
+    <input type="button" id="search" value="search" onclick="check()">
+</form>
+<p id="end"></p>
+<script>
+    function check() {
+        let english = ["hello", "one", "two", "goodbye"];
+        let vietnamese = ["xin chào", "1", "2", "tạm biệt"];
+        let x = document.getElementById("result").value;
+        let y = null;
+        for (let i = 0; i < vietnamese.length; i++) {
+            if (x === english[i]) {
+                y = vietnamese[i];
+            }
+            document.getElementById("end").innerHTML = y;
+        }
+    }
+</script>
+
 </body>
 </html>
